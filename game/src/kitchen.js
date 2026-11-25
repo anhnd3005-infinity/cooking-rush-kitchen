@@ -1,4 +1,5 @@
 // Kitchen state model: stations for prep, chopping, grilling, assembly, and service.
+// Supports combo rush multipliers, synchronized cooking animations, and zero-latency audio feedback.
 import { INGREDIENTS } from './recipes.js';
 import { playChopSound, playSizzleSound } from './audio.js';
 

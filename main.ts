@@ -90,6 +90,29 @@ for (const name of EXPECTED_SCREENSHOTS) {
 
 console.log(`[bistro-rush] Validated ${verifiedScreenshots}/${EXPECTED_SCREENSHOTS.length} game screenshots.`);
 
+// Validate game source modules integrity
+const requiredModules = [
+  'recipes.js',
+  'kitchen.js',
+  'orders.js',
+  'render.js',
+  'input.js',
+  'audio.js',
+  'particles.js',
+  'shots.js',
+  'achievements.js',
+  'challenges.js',
+  'main.js',
+];
+for (const mod of requiredModules) {
+  const modPath = join(gameTarget, 'src', mod);
+  if (!existsSync(modPath)) {
+    console.error(`[bistro-rush] Error: missing required game module: ${mod}`);
+    process.exit(1);
+  }
+}
+console.log(`[bistro-rush] Verified all ${requiredModules.length} core game modules (including achievements and challenges).`);
+
 // Build sealed dossier JSON according to makefun competition constraints
 const dossierData = buildDossier(out, {
   text_max_bytes: 163840,

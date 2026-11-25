@@ -102,6 +102,7 @@ const requiredModules = [
   'shots.js',
   'achievements.js',
   'challenges.js',
+  'soundtrack.js',
   'main.js',
 ];
 for (const mod of requiredModules) {
@@ -111,7 +112,7 @@ for (const mod of requiredModules) {
     process.exit(1);
   }
 }
-console.log(`[bistro-rush] Verified all ${requiredModules.length} core game modules (including achievements and challenges).`);
+console.log(`[bistro-rush] Verified all ${requiredModules.length} core game modules (including achievements, challenges, and soundtrack).`);
 
 // Build sealed dossier JSON according to makefun competition constraints
 const dossierData = buildDossier(out, {

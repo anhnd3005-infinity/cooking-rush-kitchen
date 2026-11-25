@@ -1,0 +1,6 @@
+[
+  { "name": "1-kitchen.jpg", "query": "?shot=1-kitchen.jpg&seed=1" },
+  { "name": "2-prep-action.jpg", "query": "?shot=2-prep-action.jpg&seed=1" },
+  { "name": "3-dish-assembly.jpg", "query": "?shot=3-dish-assembly.jpg&seed=1" },
+  { "name": "4-shift-complete.jpg", "query": "?shot=4-shift-complete.jpg&seed=1" }
+]
